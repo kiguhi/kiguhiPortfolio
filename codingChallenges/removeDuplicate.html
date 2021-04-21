@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
+
+</head>
+<body>
+
+<div class="container-fluid">
+    <ul class="nav justify-content-end bg-dark" style="height: 80px;">
+        <li class="nav-item">
+          <a class="nav-link text-white" href="../index.html#slider">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="../index.html#ourPakeg">Projects</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white" href="../index.html#portfolio">Coding Challenges</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="../resume.html">MyResume</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white" href="../index.html#footer_widget" class="booking">Contact me</a>
+          </li>
+      </ul>
+</div>
+<div class="container" style="margin-top: 30px;">
+    <h3 class="text-center">Remove duplicates from an array without using any library </h3>
+    <div class="form-group">
+      <label for="arrayInput">Enter your Array with duplicates</label>
+      <input type="text" class="form-control " id="myarray" placeholder="e.g 3,5,5,6,7">
+    </div>
+    <button class="btn btn-dark btn-block"  onclick="myFunction()">Get Array without Duplicate</button>
+    <div class="form-group">
+     <label for="duplicate">The final aray is:</label>
+     <p class="form-control" id="duplicate" style="max-width: 100%;white-space: pre-wrap;"></p>
+    </div>
+      
+</div>
+<script>
+function myFunction() {  
+  let a = document.getElementById('myarray').value.split(',');
+  let unique=[];
+  a.forEach(element => {
+    if (!unique.includes(element)) {
+        unique.push(element);
+    }
+  });
+  var x = unique.toString();
+  document.getElementById("duplicate").innerHTML = x;}    
+</script>
+</body>
+</html>    

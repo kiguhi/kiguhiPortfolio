@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Amaranth);
+  body { 
+    font-family: 'Amaranth', sans-serif; 
+    font: 16px/120%; 
+    margin: 0;  
+  }
+  #page-wrap { 
+    margin: 0 auto; 
+    padding-top: 20px;  
+    width: 360px;
+  }
+  header { 
+    padding-bottom: 20px; 
+  }
+  h1 { 
+    font-weight: 700; 
+    letter-spacing: 0.5px; 
+  }
+  h2 {
+    border-top: 1px solid #999;
+    padding-top: 15px;
+  }
+  .js {
+    padding-bottom: 40px;
+  }
+  .js span { 
+    display: block; 
+    float: left; 
+    margin-right: 4px; 
+  }
+  .clearfix:before, .clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+  }
+  .clearfix:after { clear: both; }
+  .clearfix { *zoom: 1; }
+  </style>
+</head>
+<body>
+<div class="container-fluid">
+    <ul class="nav justify-content-end bg-warning" style="height: 80px;">
+        <li class="nav-item">
+          <a class="nav-link text-white" href="../index.html#slider">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="../index.html#ourPakeg">Projects</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white" href="../index.html#portfolio">Coding Challenges</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="../resume.html">MyResume</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white" href="../index.html#footer_widget" class="booking">Contact me</a>
+          </li>
+      </ul>
+</div>
+<div class="container" style="margin-top: 30px;">
+  <div class="card">
+  <div class="card-header bg-white"><h3 class="text-warning">Find Duplicate String Problem</h3>
+</div>
+  <div class="card-body"> <p class="text-muted">
+      function myFunction(input) {<br>
+  var str=input;<br>
+  const arr = str.split('');<br>
+  const hash = new Map();<br>
+  const result = [];<br>
+  //If repeat the value is false, if no repeat the value is true<br>
+  for (let i = 0; i < arr.length; i++) {<br>
+    if (hash.get(arr[i]) === undefined) {<br>
+      hash.set(arr[i], true);<br>
+    } else {<br>
+      const value = hash.get(arr[i]);<br>
+      if (value) {<br>
+        hash.set(arr[i], !value);<br>
+      }<br>
+    }<br>
+  }<br>
+  hash.forEach((v, k) => {<br>
+    if (!v)<br>
+      result.push(k);<br>
+  });<br>
+  return result;<br>
+}  <br>
+  </p></div>
+  <div class="card-footer bg-white text-danger">**Code is written in JavaScript**</div>
+</div>
+ 
+</div>
+</body>
+</html>

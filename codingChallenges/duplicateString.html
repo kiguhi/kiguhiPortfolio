@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
+
+</head>
+<body>
+
+<div class="container-fluid">
+    <ul class="nav justify-content-end bg-dark" style="height: 80px;">
+        <li class="nav-item">
+          <a class="nav-link text-white" href="../index.html#slider">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="../index.html#ourPakeg">Projects</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white" href="../index.html#portfolio">Coding Challenges</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="../resume.html">MyResume</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white" href="../index.html#footer_widget" class="booking">Contact me</a>
+          </li>
+      </ul>
+</div>
+<div class="container" style="margin-top: 30px;">
+    <h3 class="text-center">Finding duplicate characters in a string</h3>
+    <div class="form-group">
+      <label for="arrayInput">Enter your Sting</label>
+      <input type="text" class="form-control " id="myarray" placeholder="e.g charrity">
+    </div>
+    <button class="btn btn-dark btn-block"  onclick="myFunction()">Get Duplicate Characters</button>
+    <div class="form-group">
+     <label for="duplicate">Duplicate Characters are:</label>
+     <p class="form-control" id="duplicate" style="max-width: 100%;white-space: pre-wrap;"></p>
+    </div>
+      
+</div>
+<script>
+    function myFunction() {
+  var str=document.getElementById('myarray').value;
+  const arr = str.split('');
+  const hash = new Map();
+  const result = [];
+  // If repeat the value is false, if no repeat the value is true
+  for (let i = 0; i < arr.length; i++) {
+    if (hash.get(arr[i]) === undefined) {
+      hash.set(arr[i], true);
+    } else {
+      const value = hash.get(arr[i]);
+      if (value) {
+        hash.set(arr[i], !value);
+      }
+    }
+  }
+  hash.forEach((v, k) => {
+    if (!v)
+      result.push(k);
+  });
+  var x = result.toString();
+  document.getElementById("duplicate").innerHTML = x;
+  return result;
+}    
+</script>
+</body>
+</html>

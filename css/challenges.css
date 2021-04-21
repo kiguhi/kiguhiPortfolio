@@ -1,0 +1,36 @@
+@import url(https://fonts.googleapis.com/css?family=Amaranth);
+body { 
+  font-family: 'Amaranth', sans-serif; 
+  font: 16px/120%; 
+  margin: 0;	
+}
+#page-wrap { 
+  margin: 0 auto; 
+  padding-top: 20px;	
+  width: 360px;
+}
+header { 
+  padding-bottom: 20px; 
+}
+h1 { 
+  font-weight: 700; 
+  letter-spacing: 0.5px; 
+}
+h2 {
+  border-top: 1px solid #999;
+  padding-top: 15px;
+}
+.js {
+  padding-bottom: 40px;
+}
+.js span { 
+  display: block; 
+  float: left; 
+  margin-right: 4px; 
+}
+.clearfix:before, .clearfix:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }

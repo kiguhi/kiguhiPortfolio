@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
+
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Amaranth);
+  body { 
+    font-family: 'Amaranth', sans-serif; 
+    font: 16px/120%; 
+    margin: 0;	
+  }
+  #page-wrap { 
+    margin: 0 auto; 
+    padding-top: 20px;	
+    width: 500px;
+  }
+  header { 
+    padding-bottom: 20px; 
+  }
+  h1 { 
+    font-weight: 700; 
+    letter-spacing: 0.5px; 
+  }
+  h2 {
+    border-top: 1px solid #999;
+    padding-top: 15px;
+  }
+  .js {
+    padding-bottom: 40px;
+  }
+  .js span { 
+    display: block; 
+    float: left; 
+    margin-right: 4px; 
+  }
+  .clearfix:before, .clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+  }
+  .clearfix:after { clear: both; }
+  .clearfix { *zoom: 1; }
+  </style>
+</head>
+<body>
+<div class="container-fluid">
+    <ul class="nav justify-content-end bg-dark" style="height: 80px;">
+        <li class="nav-item">
+          <a class="nav-link text-white" href="../index.html#slider">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="../index.html#ourPakeg">Projects</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white" href="../index.html#portfolio">Coding Challenges</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="../resume.html">MyResume</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white" href="../index.html#footer_widget" class="booking">Contact me</a>
+          </li>
+      </ul>
+</div>
+<div class="container" style="margin-top: 30px;">
+  <h3 class="text-center">Friend or Foe?</h3>
+    <h4 class="text-center">
+        if a name has exactly 4 letters in it, you can be sure that it has to be a friend of yours!<br>
+        Otherwise, you can be sure he's not....<br>
+        Ex: Input = ["Ryan", "Kieran", "Jason", "Yous"], Output = ["Ryan", "Yous"]
+    </h4>
+    <div class="form-group" style="margin-top: 30px;">
+      <label for="arrayInput">Enter List of names</label>
+      <input type="text" class="form-control " id="myarray" placeholder="e.g charity,joy,beth">
+    </div>
+    <button class="btn btn-dark btn-block"  onclick="returnFriend()">Return Friend</button>
+    <div class="form-group">
+     <label for="duplicate">My friend is:</label>
+     <p class="form-control" id="friend" style="max-width: 100%;white-space: pre-wrap;"></p>
+    </div>
+</div>
+<script>
+    // program to count the number of vowels in a string
+
+function returnFriend() { 
+    let a = document.getElementById('myarray').value.split(',');
+    var result;
+    var friend=[];
+    for (var i = 0; i < a.length; i++) {
+        if(a[i].trim().length==4){
+        result=a[i];
+        friend.push(result);
+        }
+    }
+    var x = friend.toString();
+    document.getElementById("friend").innerHTML = x;
+}  
+</script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
+
+</head>
+<body>
+
+<div class="container-fluid">
+    <ul class="nav justify-content-end bg-dark" style="height: 80px;">
+        <li class="nav-item">
+          <a class="nav-link text-white" href="../index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="../index.html#ourPakeg">Projects</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white" href="../index.html#portfolio">Coding Challenges</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="../resume.html">MyResume</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white" href="../index.html#footer_widget" class="booking">Contact me</a>
+          </li>
+      </ul>
+</div>
+<div class="container" style="margin-top: 30px;">
+    <h3 class="text-center">count a number of vowels and consonants in a given string</h3>
+    <div class="form-group">
+      <label for="arrayInput">Enter your Sting</label>
+      <input type="text" class="form-control " id="myarray" placeholder="e.g My String">
+    </div>
+    <button class="btn btn-dark btn-block"  onclick="countVowelConsonant()">Count Number of Vowels and Consonants</button>
+    <div class="form-group">
+     <label for="duplicate">No of Vowels:</label>
+     <p class="form-control" id="vowels" style="max-width: 100%;white-space: pre-wrap;"></p>
+    </div>
+    <div class="form-group">
+      <label for="duplicate">No of Consonants:</label>
+      <p class="form-control" id="consonants" style="max-width: 100%;white-space: pre-wrap;"></p>
+     </div>
+</div>
+<script>
+    // program to count the number of vowels in a string
+
+function countVowelConsonant() { 
+
+var str=document.getElementById('myarray').value;
+// find the count of vowelsusing regex
+const v_count = str.match(/[aeiou]/gi).length;
+const c_count = str.match(/[bcdfghjklmnpqrstvwxyz]/gi).length;
+// return number of vowels
+document.getElementById("vowels").innerHTML = v_count;
+document.getElementById("consonants").innerHTML = c_count;
+}  
+</script>
+</body>
+</html>
